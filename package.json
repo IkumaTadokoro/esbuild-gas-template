@@ -7,7 +7,7 @@
     "build": "bin/build",
     "deploy": "bin/build && clasp push",
     "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
-    "lint:fix": "rettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts",
+    "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts",
     "test": "jest"
   },
   "author": "ikuma-t <tadokorodev@gmail.com>",
