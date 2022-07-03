@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "bin/build",
-    "deploy": "bin/build && clasp push",
+    "deploy": "clasp push && clasp open",
     "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
     "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts",
     "test": "jest"
