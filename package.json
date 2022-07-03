@@ -7,7 +7,7 @@
     "build": "bin/build",
     "deploy": "clasp push && clasp open",
     "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
-    "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts",
+    "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'",
     "test": "jest"
   },
   "author": "ikuma-t <tadokorodev@gmail.com>",
@@ -23,6 +23,7 @@
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.5.3",
-    "jest": "^28.1.2"
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1"
   }
 }
