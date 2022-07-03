@@ -1,8 +1,8 @@
 ---
 root: true
-parser: "@typescript-eslint/parser"
+parser: '@typescript-eslint/parser'
 plugins:
-  - "@typescript-eslint"
+  - '@typescript-eslint'
   - jest
 extends:
   - eslint:recommended
@@ -10,3 +10,6 @@ extends:
   - plugin:@typescript-eslint/recommended
   - plugin:jest/recommended
   - prettier
+rules:
+  arrow-parens:
+    - 2

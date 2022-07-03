@@ -24,7 +24,7 @@ GitHub Template [Create a repo from this template on GitHub](https://github.com/
 - If you want to register multiple executable functions, do not forget to register them in global!
 
 ```typescript
-import { sum } from "./utils"
+import { sum } from './utils'
 
 const main = (): void => {
   Logger.log(sum(12, 20))
@@ -34,9 +34,9 @@ const sub = (): void => {
   Logger.log(sum(32, 28))
 }
 
-declare let global: any;
-global.main = main;
-global.sub = sub;  // Can be called directly from Google Apps Script as `sub`
+declare let global: any
+global.main = main
+global.sub = sub // Can be called directly from Google Apps Script as `sub`
 ```
 
 3. Compile & transpile your scripts with esbuild.
