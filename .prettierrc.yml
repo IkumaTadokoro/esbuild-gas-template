@@ -1,11 +1,2 @@
-arrowParens: always
-bracketSameLine: false
-bracketSpacing: true
-jsxSingleQuote: true
-printWidth: 80
-requirePragma: true
-semi: true
+semi: false
 singleQuote: true
-tabWidth: 2
-trailingComma: all
-useTabs: false
