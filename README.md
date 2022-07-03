@@ -46,7 +46,7 @@ global.sub = sub;  // Can be called directly from Google Apps Script as `sub`
 npm run build
 ```
 
-4. (First time only) Copy `src/appsscript.json` to the `dist` directory. See the [Known Issues]()
+4. (First time only) Copy `src/appsscript.json` to the `dist` directory. See the [Known Issues](https://github.com/IkumaTadokoro/esbuild-gas-template#known-issues-pr-welcome)
 
 5. Push your scripts to Google Apps Script with clasp.
 
