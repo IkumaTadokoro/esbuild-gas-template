@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate": "npm init -w app/$npm_config_name -y && cp -r template/* app/$npm_config_name",
+    "generate": "npm init -w app/$npm_config_name -y && cp -r template/. app/$npm_config_name",
     "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
     "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'",
     "test": "jest"
