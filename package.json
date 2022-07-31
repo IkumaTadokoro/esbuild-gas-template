@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "bin/build",
-    "deploy": "clasp push && clasp open",
-    "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
-    "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'",
+    "gen": "npm init -w app/$npm_config_name -y && cp -r template/. app/$npm_config_name && npm set-script -w app/$npm_config_name build \"bin/build && cp src/appsscript.json dist/appsscript.json\" && npm set-script -w app/$npm_config_name lint \"prettier 'src/**/*.ts' && eslint 'src/**/*.ts'\" && npm set-script -w app/$npm_config_name lint:fix \"prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'\" && npm set-script -w app/$npm_config_name test \"jest\"",
+    "lint": "prettier 'app/**/*.ts' 'lib/**/*.ts' && eslint 'app/**/*.ts' 'lib/**/*.ts'",
+    "lint:fix": "prettier --write 'app/**/*.ts' 'lib/**/*.ts' && eslint --fix 'app/**/*.ts' 'lib/**/*.ts'",
     "test": "jest"
   },
   "author": "ikuma-t <tadokorodev@gmail.com>",
   "license": "ISC",
+  "workspaces": [
+    "app/*",
+    "lib",
+    "app"
+  ],
   "devDependencies": {
     "@types/google-apps-script": "^1.0.49",
     "@types/jest": "^28.1.4",
