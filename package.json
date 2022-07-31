@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gen": "npm init -w app/$npm_config_name -y && cp -r template/. app/$npm_config_name && npm set-script -w app/$npm_config_name build \"bin/build && cp src/appsscript.json dist/appsscript.json\"",
+    "gen": "npm init -w app/$npm_config_name -y && cp -r template/. app/$npm_config_name && npm set-script -w app/$npm_config_name build \"bin/build && cp src/appsscript.json dist/appsscript.json\" && npm set-script -w app/$npm_config_name lint \"prettier 'src/**/*.ts' && eslint 'src/**/*.ts'\" && npm set-script -w app/$npm_config_name lint:fix \"prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'\" && npm set-script -w app/$npm_config_name test \"jest\"",
     "lint": "prettier 'app/**/*.ts' 'lib/**/*.ts' && eslint 'app/**/*.ts' 'lib/**/*.ts'",
     "lint:fix": "prettier --write 'app/**/*.ts' 'lib/**/*.ts' && eslint --fix 'app/**/*.ts' 'lib/**/*.ts'",
     "test": "jest"
