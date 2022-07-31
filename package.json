@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate": "npm init -w app/$npm_config_name -y && cp -r template/. app/$npm_config_name",
+    "gen": "npm init -w app/$npm_config_name -y && cp -r template/. app/$npm_config_name && npm set-script -w app/$npm_config_name build \"bin/build\"",
     "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
     "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'",
     "test": "jest"
@@ -13,7 +13,8 @@
   "license": "ISC",
   "workspaces": [
     "app/*",
-    "lib"
+    "lib",
+    "app"
   ],
   "devDependencies": {
     "@types/google-apps-script": "^1.0.49",
