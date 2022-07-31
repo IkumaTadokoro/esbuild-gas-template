@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "bin/build",
-    "deploy": "clasp push && clasp open",
+    "generate": "npm init -w app/$npm_config_name -y && cp -r template/* app/$npm_config_name",
     "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
     "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'",
     "test": "jest"
   },
   "author": "ikuma-t <tadokorodev@gmail.com>",
   "license": "ISC",
+  "workspaces": [
+    "app/*",
+    "lib"
+  ],
   "devDependencies": {
     "@types/google-apps-script": "^1.0.49",
     "@types/jest": "^28.1.4",
